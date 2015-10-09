@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="style/style.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<style type="text/css">
+		#owl-demo{position:relative;width:960px;margin:20px auto 0 auto;}
+		#owl-demo .item{ position:relative;display:block;}
+		#owl-demo img{display:block;width:960px;}
+		#owl-demo b{position:absolute;left:0;bottom:0;width:100%;height:78px;background-color:#000;opacity:.5;filter:alpha(opacity=50);}
+		#owl-demo span{position:absolute;left:0;bottom:37px;width:100%;font:18px/32px "微软雅黑","黑体";color:#fff;text-align:center;}
+
+		.owl-pagination{position:absolute;left:0;bottom:10px;width:100%;height:22px;text-align:center;}
+		.owl-page{display:inline-block;width:10px;height:10px;margin:0 5px;background-image:url(image/bg15.png);*display:inline;*zoom:1;}
+		.owl-pagination .active{width:25px;background-image:url(image/bg16.png);}
+		.owl-buttons{display:none;}
+		.owl-buttons div{position:absolute;top:50%;width:40px;height:80px;margin-top:-40px;text-indent:-9999px;}
+		.owl-prev{left:0;background-image:url(image/bg17.png);}
+		.owl-next{right:0;background-image:url(image/bg18.png);}
+		.owl-prev:hover{background-image:url(image/bg19.png);}
+		.owl-next:hover{background-image:url(image/bg20.png);}		
+	</style>
+	<link rel="stylesheet" href="style/owl.carousel.css" />
+	<script type="text/javascript" src="js/owl.carousel.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('#owl-demo').owlCarousel({
+			items: 1,
+			navigation: true,
+			navigationText: ["上一个","下一个"],
+			autoPlay: true,
+			stopOnHover: true
+		}).hover(function(){
+			$('.owl-buttons').show();
+		}, function(){
+			$('.owl-buttons').hide();
+		});
+	});
+	</script>
+</head>
+<body>
+	<div id="warp" class="index">
+		<header id="header">
+			<nav>
+				<ul>
+					<li id="nav">
+						<a href="#"><img src="image/1_01_03.png" alt="查看"></a>
+					</li>
+					<li>
+						<a href=""><img src="image/1_01_05.png" alt=""></a>
+					</li>
+					<li class="l_r">
+						<a href="">注册</a>
+					</li>
+					<li class="l_r">
+						<a href="">登录</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<aside>
+		<ul>
+			<li>
+				<a href="">首页</a>
+			</li>
+			<li>
+				<a href="new.html">球况信息</a>
+			</li>
+			<li>
+				<a href="">球友分享</a>
+			</li>
+			<li>
+				<a href="">赛事安排</a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="blogs.html">我发布的</a>
+			</li>
+			<li>
+				<a href="">回复我的</a>
+			</li>
+			<li>
+				<a href="">@我的</a>
+			</li>
+		</ul>
+	</aside>
+		<div id="main">
+		<section id="ad">
+			<div id="owl-demo" class="owl-carousel">
+				<a class="item" href="" target="_blank"><img src="image/ad.png" alt=""></a>
+				<a class="item" href="" target="_blank"><img src="image/ad.png" alt=""></a>
+				<a class="item" href="" target="_blank"><img src="image/ad.png" alt=""></a>
+				<a class="item" href="" target="_blank"><img src="image/ad.png" alt=""></a>
+				<a class="item" href="" target="_blank"><img src="image/ad.png" alt=""></a>
+				<a class="item" href="" target="_blank"><img src="image/ad.png" alt=""></a>
+				<a class="item" href="" target="_blank"><img src="image/ad.png" alt=""></a>
+			</div>	
+		</section>		
+		<section id="one">
+			<article>
+				<a href="">
+					<figure>
+						<img src="image/new.png" alt="">
+					</figure>
+					<figcaption>
+						大魔王大魔王大魔王大魔王大魔王大魔王大魔王大魔王大魔王
+					</figcaption>
+				</a>
+			</article>
+			<article>
+				<a href="">
+					<figure>
+						<img src="image/new.png" alt="">
+					</figure>
+					<figcaption>
+						大魔王大魔王大魔王大魔王大魔王大魔王大魔王大魔王大魔王
+					</figcaption>
+				</a>
+			</article>
+			<article>
+				<a href="">
+					<figure>
+						<img src="image/new.png" alt="">
+					</figure>
+					<figcaption>
+						大魔王大魔王大魔王大魔王大魔王大魔王大魔王大魔王大魔王
+					</figcaption>
+				</a>
+			</article>
+		</section>
+		<section id="two">
+			<section id="news">
+				<header>
+					<h2>最新资讯</h2>
+					<div id="more"><a href="">more</a></div>
+				</header>
+				<ul>
+					<li>
+						<a href="">我库我库我库我库我库我库我库我库我库我库</a>
+					</li>
+					<li>
+						<a href="">我库我库我库我库我库我库我库我库我库我库</a>
+					</li>
+					<li>
+						<a href="">我库我库我库我库我库我库我库我库我库我库</a>
+					</li>
+					<li>
+						<a href="">我库我库我库我库我库我库我库我库我库我库</a>
+					</li>
+					<li>
+						<a href="">我库我库我库我库我库我库我库我库我库我库</a>
+					</li>
+					<li>
+						<a href="">我库我库我库我库我库我库我库我库我库我库</a>
+					</li>
+					<li>
+						<a href="">我库我库我库我库我库我库我库我库我库我库</a>
+					</li>
+				</ul>
+			</section>
+			<section id="zhoubian">
+				<header>
+					<h2>周边</h2>
+					<div id="more">more</div>
+				</header>
+				<ul>
+					<li>
+						<a href="">我库我库我库我库我库我库我库我库我库我库</a>
+					</li>
+					<li>
+						<a href="">我库我库我库我库我库我库我库我库我库我库</a>
+					</li>
+					<li>
+						<a href="">我库我库我库我库我库我库我库我库我库我库</a>
+					</li>
+					<li>
+						<a href="">我库我库我库我库我库我库我库我库我库我库</a>
+					</li>
+					<li>
+						<a href="">我库我库我库我库我库我库我库我库我库我库</a>
+					</li>
+					<li>
+						<a href="">我库我库我库我库我库我库我库我库我库我库</a>
+					</li>
+					<li>
+						<a href="">我库我库我库我库我库我库我库我库我库我库</a>
+					</li>
+				</ul>
+			</section>
+			<section id="yueqiu">
+				<header>
+					<h2>约球</h2>
+					<div id="more">more</div>
+				</header>
+				<ul>
+					<li>
+						<a href="">我库我库我库我库我库我库我库我库我库我库</a>
+					</li>
+					<li>
+						<a href="">我库我库我库我库我库我库我库我库我库我库</a>
+					</li>
+					<li>
+						<a href="">我库我库我库我库我库我库我库我库我库我库</a>
+					</li>
+					<li>
+						<a href="">我库我库我库我库我库我库我库我库我库我库</a>
+					</li>
+					<li>
+						<a href="">我库我库我库我库我库我库我库我库我库我库</a>
+					</li>
+					<li>
+						<a href="">我库我库我库我库我库我库我库我库我库我库</a>
+					</li>
+					<li>
+						<a href="">我库我库我库我库我库我库我库我库我库我库</a>
+					</li>
+				</ul>	
+			</section>
+		</section>
+		</div>
+	</div>
+	<footer>
+		<p>
+			<span>©2015</span>    
+			<span><a href="">Studio G3</a></span>    
+			<span><a href="">意见反馈</a></span>     
+			<span>京ICP证030173号</span>
+		</p>
+	</footer>
+	
+</body>
+</html>

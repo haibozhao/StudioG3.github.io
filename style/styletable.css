@@ -1,0 +1,16 @@
+/* 焦点图 */
+.idx-focus{margin:40px auto 0 auto;float: left;width: 480px;}
+.idx-focus,.focus-pic li{width:480px;height:290px;position:relative;overflow:hidden;}
+.idx-foc-tmp{height:230px;}
+.focus-pic li{float:left;height:230px;}
+.focus-pic li img{width:480px;height:230px;}
+.focus-pic .bg{height:30px;width:100%;position:absolute;left:0;bottom:0;background:#000;opacity:.6;filter:Alpha(opacity=60);z-index:1;}
+.focus-pic .txt{height:30px;position:absolute;width:100%;line-height:30px;text-indent:10px;overflow:hidden;z-index:2;left:0;bottom:0;}
+.idx-focus .xtaber-tabs{height:60px;background:#565656;}
+.idx-focus .xtaber-tabs li{float:left;padding:3px;position:relative;cursor:pointer;z-index:3;}
+.idx-focus .xtaber-tabs img{width:90px;height:54px;}
+.idx-focus .xtaber-tabs .current{background:#2ba4d7;}
+.idx-focus .xtaber-tabs .current i{width:7px;height:4px;position:absolute;left:50%;margin-left:-3px;top:-4px;overflow:hidden;background:url(img/icon.png) no-repeat;}
+.idx-focus .btn-prev,.idx-focus .btn-next{background:url(img/foc_btn.png) no-repeat;_background:url(img/foc_btn_8.png) no-repeat;width:31px;height:50px;position:absolute;z-index:4;top:85px;_filter:Alpha(opacity=70);}
+.idx-focus .btn-prev{background-position:0 0;left:10px;}
+.idx-focus .btn-next{background-position:-33px 0;right:10px;}

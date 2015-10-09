@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style/style.css">
+	<script src="js/jquery.js"></script>
+	<script>
+		$(function(){
+			$(".comment").toggle(function(){
+				var str = '<div id="com" style="padding-bottom: 20px;margin-top:20px;"><input type="text" name="comment" style="width:500px;height:26px;margin-left:50px;"><input type="submit" value="发表"></div>';
+				$(this).parents(".tab").append(str);
+			},
+			function(){
+				$(this).parents(".tab").children("#com").remove();
+			}
+			);
+			var bigImg='';
+			var _index=0;
+			var imgall='';
+			var length=8;
+			$(".popup").click(function(){
+				$(".show").hide();
+				$(this).hide();
+			});
+			$(".info img").click(function(){
+				length = $(this).parent().children().length-1;
+				imgall = $(this).parent().children();
+				$(".popup").show();
+				$(".show").show();
+				bigImg=$(this).attr("src");//获取点击图片的地址
+				//alert(bigImg);
+				$(".show img.big").attr("src",bigImg); //更换大图的图片地址
+				_index=$(this).index();//保存图片的序列号
+				//alert(_index);
+			});
+			$(".right").click(function(){
+				_index++; //序列号加1 _index+1
+				if(_index>length){_index=0};
+				bigImg=$(imgall).eq(_index).attr("src");
+				$(".show img.big").attr("src",bigImg);
+			});
+			$(".left").click(function(){
+				_index--; //序列号加1 _index+1
+				if(_index<-1){_index=length};
+				bigImg=$(imgall).eq(_index).attr("src");
+				$(".show img.big").attr("src",bigImg);
+			});
+		})
+	</script>
+</head>
+<body>
+	<div id="warp" class="blogs">
+		<header id="nav">
+			<nav>
+				<ul>
+					<li>
+						<a href=""><img src="image/blog1_03.png" alt=""></a>
+					</li>
+					<li>
+						<a href="">首页</a>
+					</li>
+					<li>
+						<a href="">广播</a>
+					</li>
+					<li>
+						<a href="">话题</a>
+					</li>
+					<li>
+						<a href="">约球</a>
+					</li>
+					<li>
+						<a href="">新闻</a>
+					</li>
+					<li>
+						<a href="">播客</a>
+					</li>
+					<li>
+						<a href="">信息</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div id="main">
+			<aside id="left">
+				<header>
+					<h1>热门广播</h1>
+				</header>
+				<ul>
+					<li>
+						<a href="">热门广播热门广播热门广</a>
+					</li>
+					<li>
+						<a href="">热门广播热门广播热门广</a>
+					</li>
+					<li>
+						<a href="">热门广播热门广播热门广</a>
+					</li>
+					<li>
+						<a href="">热门广播热门广播热门广</a>
+					</li>
+					<li>
+						<a href="">热门广播热门广播热门广</a>
+					</li>
+					<li>
+						<a href="">热门广播热门广播热门广</a>
+					</li>
+					<li>
+						<a href="">热门广播热门广播热门广</a>
+					</li>
+				</ul>
+				<div id="ad">
+					<img src="image/blog-1_41.png" alt="">
+				</div>
+			</aside>
+			<section id="cont">
+				<section class="blog">
+					<div class="head">
+						<img src="image/blog-1_15.png" alt="">
+					</div>
+					<div class="name">
+						<a href="">小霸王</a>
+						<div class="img"><img src="image/blog.png" alt=""></div>
+					</div>
+					<p class="dec">
+						<a href="">
+							做了一组金星老师的表情包，快拿去撕逼吧
+						</a>
+					</p>
+					<div class="info">
+						<img src="image/big_1.jpg"/>
+						<img src="image/big_2.jpg"/>
+						<img src="image/big_3.jpg"/>
+						<img src="image/big_4.jpg"/>
+						<img src="image/big_5.jpg"/>
+						<img src="image/big_6.jpg"/>
+						<img src="image/big_7.jpg"/>
+						<img src="image/big_8.jpg"/>
+						<img src="image/big_9.jpg"/>
+					</div>
+					<div class="popup"></div>
+
+					<div class="show">
+						<img class="big" src="image/big_1.jpg"/>
+						<img class="left" src="image/left.png"/>
+						<img class="right" src="image/right.png"/>
+					</div>
+					<div class="tab">
+						<ul>
+							<li>
+								<a href="#">收藏</a>
+							</li>
+							<li>
+								<a href="#" class="comment">评论</a>
+							</li>
+							<li>
+								<a href="#">转发</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="blog">
+					<div class="head">
+						<img src="image/blog-1_15.png" alt="">
+					</div>
+					<div class="name">
+						<a href="">小霸王</a>
+						<div class="img"><img src="image/blog.png" alt=""></div>
+					</div>
+					<p class="dec">
+						<a href="">
+							做了一组金星老师的表情包，快拿去撕逼吧
+						</a>
+					</p>
+					<div class="info">
+							<img src="image/blog-1_28.png" alt="">
+							<img src="image/big_1.jpg" alt="">
+							<img src="image/blog-1_28.png" alt="">
+							<img src="image/big_2.jpg" alt="">
+							<img src="image/blog-1_28.png" alt="">
+							<img src="image/big_5.jpg" alt="">
+					
+					</div>
+
+					<div class="tab">
+						<ul>
+							<li>
+								<a href="#">收藏</a>
+							</li>
+							<li>
+								<a href="#" class="comment">评论</a>
+							</li>
+							<li>
+								<a href="#">转发</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="blog">
+					<div class="head">
+						<img src="image/blog-1_15.png" alt="">
+					</div>
+					<div class="name">
+						<a href="">小霸王</a>
+						<div class="img"><img src="image/blog.png" alt=""></div>
+					</div>
+					<p class="dec">
+						<a href="">
+							做了一组金星老师的表情包，快拿去撕逼吧
+						</a>
+					</p>
+					<div class="info">
+						<img src="image/blog-1_28.png" alt="">
+						<img src="image/blog-1_28.png" alt="">
+						<img src="image/blog-1_28.png" alt="">
+					</div>
+					<div class="tab">
+						<ul>
+							<li>
+								<a href="#">收藏</a>
+							</li>
+							<li>
+								<a href="#" class="comment">评论</a>
+							</li>
+							<li>
+								<a href="#">转发</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="blog">
+					<div class="head">
+						<img src="image/blog-1_15.png" alt="">
+					</div>
+					<div class="name">
+						<a href="">小霸王</a>
+						<div class="img"><img src="image/blog.png" alt=""></div>
+					</div>
+					<p class="dec">
+						<a href="">
+							做了一组金星老师的表情包，快拿去撕逼吧
+						</a>
+					</p>
+					<div class="info">
+						<img src="image/blog-1_28.png" alt="">
+						<img src="image/blog-1_28.png" alt="">
+					</div>
+					<div class="tab">
+						<ul>
+							<li>
+								<a href="#">收藏</a>
+							</li>
+							<li>
+								<a href="#" class="comment">评论</a>
+							</li>
+							<li>
+								<a href="#">转发</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="blog">
+					<div class="head">
+						<img src="image/blog-1_15.png" alt="">
+					</div>
+					<div class="name">
+						<a href="">小霸王</a>
+						<div class="img"><img src="image/blog.png" alt=""></div>
+					</div>
+					<p class="dec">
+						<a href="">
+							做了一组金星老师的表情包，快拿去撕逼吧
+						</a>
+					</p>
+					<div class="info">
+						<img src="image/blog-1_28.png" alt="">
+						<img src="image/blog-1_28.png" alt="">
+						<img src="image/blog-1_28.png" alt="">
+						<img src="image/blog-1_28.png" alt="">
+						<img src="image/blog-1_28.png" alt="">
+					</div>
+					<div class="tab">
+						<ul>
+							<li>
+								<a href="#">收藏</a>
+							</li>
+							<li>
+								<a href="#" class="comment">评论</a>
+							</li>
+							<li>
+								<a href="#">转发</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</section>
+			<footer>
+				<p>
+					<span>©2015</span>    
+					<span><a href="">Studio G3</a></span>    
+					<span><a href="">意见反馈</a></span>     
+					<span>京ICP证030173号</span>
+				</p>
+			</footer>
+		</div>
+		<aside id="right">
+			<section id="pro">
+					<div class="header">
+						<img src="" alt="">
+					</div>
+					<div class="name">
+						<a href="">小霸王</a>
+						<div class="img">
+							<img src="image/blog.png" alt="">
+						</div>					
+					</div>
+					<p class="dec">
+						<a href="">
+							做了一组金星老师的表情包，快拿去撕逼吧
+						</a>
+					</p>
+			</section>
+			<section id="pro">
+				<div class="header">
+					<img src="" alt="">
+				</div>
+				<div class="name">
+					<a href="">小霸王</a>
+					<div class="img">
+						<img src="image/blog.png" alt="">
+					</div>					
+				</div>
+				<p class="dec">
+					<a href="">
+						做了一组金星老师的表情包，快拿去撕逼吧
+					</a>
+				</p>
+			</section>
+			<section id="pro">
+				<div class="header">
+					<img src="" alt="">
+				</div>
+				<div class="name">
+					<a href="">小霸王</a>
+					<div class="img">
+						<img src="image/blog.png" alt="">
+					</div>					
+				</div>
+				<p class="dec">
+					<a href="">
+						做了一组金星老师的表情包，快拿去撕逼吧
+					</a>
+				</p>
+			</section>
+			<section id="pro">
+				<div class="header">
+					<img src="" alt="">
+				</div>
+				<div class="name">
+					<a href="">小霸王</a>
+					<div class="img">
+						<img src="image/blog.png" alt="">
+					</div>					
+				</div>
+				<p class="dec">
+					<a href="">
+						做了一组金星老师的表情包，快拿去撕逼吧
+					</a>
+				</p>
+			</section>
+			<section id="pro">
+				<div class="header">
+					<img src="" alt="">
+				</div>
+				<div class="name">
+					<a href="">小霸王</a>
+					<div class="img">
+						<img src="image/blog.png" alt="">
+					</div>					
+				</div>
+				<p class="dec">
+					<a href="">
+						做了一组金星老师的表情包，快拿去撕逼吧
+					</a>
+				</p>
+			</section>
+			<section id="pro">
+				<div class="header">
+					<img src="" alt="">
+				</div>
+				<div class="name">
+					<a href="">小霸王</a>
+					<div class="img">
+						<img src="image/blog.png" alt="">
+					</div>					
+				</div>
+				<p class="dec">
+					<a href="">
+						做了一组金星老师的表情包，快拿去撕逼吧
+					</a>
+				</p>
+			</section>
+			<section id="pro">
+				<div class="header">
+					<img src="" alt="">
+				</div>
+				<div class="name">
+					<a href="">小霸王</a>
+					<div class="img">
+						<img src="image/blog.png" alt="">
+					</div>					
+				</div>
+				<p class="dec">
+					<a href="">
+						做了一组金星老师的表情包，快拿去撕逼吧
+					</a>
+				</p>
+			</section>
+		</aside>
+	</div>	
+</body>
+</html>
